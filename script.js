@@ -14,3 +14,34 @@ document.querySelectorAll('nav a').forEach(anchor => {
         targetElement.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+// Example of adding interactivity: Highlighting sections on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('main section');
+    const scrollPosition = window.scrollY + 50;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            document.querySelector('nav ul li a.active').classList.remove('active');
+            document.querySelector(`nav ul li a[href="#${sectionId}"]`).classList.add('active');
+        }
+    });
+});
+
+// Example of interactive element: Form validation (if you have a contact form)
+function validateForm() {
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (e) => {
+        const name = form.elements['name'].value;
+        const email = form.elements['email'].value;
+
+        if (name === '' || email === '') {
+            e.preventDefault();
+            alert('Please fill in all fields.');
+        }
+    });
+}
