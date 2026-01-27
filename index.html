@@ -3,69 +3,275 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professional Portfolio</title>
+  <title>Bandaru Lokesh | Professional Portfolio</title>
 
   <!-- Google tag (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);}    
     gtag('js', new Date());
-
-    gtag('config', 'G-YHM2NNKCM8');
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary:#0b3c5d;
+      --secondary:#1d2731;
+      --accent:#00c6ff;
+      --light:#f5f7fa;
+      --dark:#111827;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--light);
+      color:var(--secondary);
+      line-height:1.6;
+      scroll-behavior:smooth;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      position:fixed;
+      top:0;left:0;width:100%;
+      background:#ffffffcc;
+      backdrop-filter:blur(12px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0.8rem 3rem;
+      z-index:1000;
+      box-shadow:0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:600;
+      font-size:1.1rem;
+      color:var(--primary);
+    }
+
+    .logo img{
+      width:42px;height:42px;
+      border-radius:50%;
+      border:2px solid var(--accent);
+    }
+
+    .nav-links{
+      list-style:none;
+      display:flex;
+      gap:1.8rem;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:var(--secondary);
+      font-weight:500;
+      position:relative;
+    }
+
+    .nav-links a::after{
+      content:'';
+      position:absolute;
+      width:0;height:2px;
+      left:0;bottom:-4px;
+      background:var(--accent);
+      transition:0.3s;
+    }
+
+    .nav-links a:hover::after{width:100%;}
+
+    /* HERO */
+    .hero{
+      height:100vh;
+      background:linear-gradient(120deg,var(--primary),var(--dark));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:0 1rem;
+    }
+
+    .hero-content{
+      max-width:800px;
+      animation:fadeUp 1.2s ease forwards;
+    }
+
+    .hero-content h1{
+      font-size:3rem;
+      margin-bottom:1rem;
+      font-weight:700;
+    }
+
+    .hero-content p{
+      font-size:1.1rem;
+      opacity:0.9;
+      margin-bottom:2rem;
+    }
+
+    .hero-content button{
+      padding:0.9rem 2.5rem;
+      border:none;
+      border-radius:30px;
+      background:linear-gradient(90deg,var(--accent),#0072ff);
+      color:white;
+      font-size:1rem;
+      font-weight:500;
+      cursor:pointer;
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hero-content button:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 30px rgba(0,198,255,0.4);
+    }
+
+    /* SECTIONS */
+    section{padding:6rem 3rem;}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:2.5rem;
+      background:white;
+    }
+
+    .card{
+      background:var(--light);
+      border-radius:18px;
+      padding:2rem;
+      text-align:center;
+      transition:transform 0.4s, box-shadow 0.4s;
+      animation:fadeUp 1s ease forwards;
+    }
+
+    .card img{
+      width:100%;
+      max-width:220px;
+      margin-bottom:1.5rem;
+      border-radius:12px;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 25px 50px rgba(0,0,0,0.12);
+    }
+
+    .card h3{color:var(--primary);margin-bottom:0.6rem;}
+
+    /* HIGHLIGHT */
+    .highlight{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:3rem;
+      align-items:center;
+      background:linear-gradient(120deg,#eef2f7,#ffffff);
+    }
+
+    .highlight-text h2{
+      font-size:2.3rem;
+      margin-bottom:1rem;
+      color:var(--primary);
+    }
+
+    .highlight-text button{
+      margin-top:1.5rem;
+      padding:0.8rem 2.2rem;
+      border-radius:25px;
+      border:2px solid var(--primary);
+      background:none;
+      font-weight:500;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .highlight-text button:hover{
+      background:var(--primary);
+      color:white;
+    }
+
+    .highlight-image img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 30px 60px rgba(0,0,0,0.15);
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--dark);
+      color:#9ca3af;
+      text-align:center;
+      padding:1.5rem;
+      font-size:0.9rem;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(30px);} 
+      to{opacity:1;transform:translateY(0);} 
+    }
+
+    @media(max-width:900px){
+      .highlight{grid-template-columns:1fr;}
+      .hero-content h1{font-size:2.4rem;}
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <nav class="navbar">
-    <div class="logo">
-      <img src="profile.jpg" alt="Profile" />
-      <span>AGASTYAA AEROSPACE</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="navbar">
+  <div class="logo">
+    <img src="profile.jpg" alt="Profile" />
+    <span>Bandaru Lokesh</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <div class="hero-content" id="home">
-    <h1>Professional Portfolio Website</h1>
-    <p>Professional portfolio website with data storage and file upload</p>
-    <button onclick="scrollToSection('about')">Create My Website</button>
+<header class="hero" id="home">
+  <div class="hero-content">
+    <h1>Bandaru Lokesh</h1>
+    <p>Mechanical Design & Aerospace Portfolio — Projects, Research, and Professional Experience</p>
+    <button onclick="document.getElementById('about').scrollIntoView()">Explore My Work</button>
   </div>
 </header>
 
 <section class="cards" id="about">
   <div class="card">
     <img src="resume.jpg" alt="Resume" />
-    <h3>My Resume</h3>
-    <p>View and download my professional resume.</p>
+    <h3>Resume</h3>
+    <p>Download and review my professional resume.</p>
   </div>
   <div class="card">
     <img src="experience.jpg" alt="Experience" />
-    <h3>Work Experience</h3>
-    <p>Explore my professional experience and achievements.</p>
+    <h3>Experience</h3>
+    <p>Industry, research, and internship experience.</p>
   </div>
   <div class="card">
     <img src="projects.jpg" alt="Projects" />
-    <h3>Project Files</h3>
-    <p>Access my project designs, files, and materials.</p>
+    <h3>Projects</h3>
+    <p>Mechanical design and aerospace projects.</p>
   </div>
 </section>
 
 <section class="highlight" id="projects">
   <div class="highlight-text">
     <h2>Professional Portfolio</h2>
-    <p>Showcase your skills and projects with a modern portfolio website.</p>
-    <button>Explore My Portfolio</button>
+    <p>A clean, modern showcase of engineering work, simulations, designs, and documentation.</p>
+    <button>View Portfolio</button>
   </div>
   <div class="highlight-image">
     <img src="portfolio.jpg" alt="Portfolio" />
@@ -73,9 +279,8 @@
 </section>
 
 <footer id="contact">
-  <p>© 2026 Agastyaa Aerospace. All rights reserved.</p>
+  © 2026 Bandaru Lokesh. All rights reserved.
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
