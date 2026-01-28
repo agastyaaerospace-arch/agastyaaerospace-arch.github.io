@@ -91,3 +91,177 @@
   max-width: 1300px;
   margin: 0 auto;
 }
+/* Navbar - Beautiful dynamic style */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 30px 5%;
+  background: transparent;
+  transition: all 0.4s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar.scrolled {
+  padding: 15px 5%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.4s;
+}
+
+.logo i {
+  font-size: 2.6rem;
+  color: var(--accent);
+}
+
+.navbar.scrolled .logo,
+.navbar.scrolled nav a,
+.navbar.scrolled .btn-outline {
+  color: var(--dark);
+}
+
+.navbar.scrolled .logo i {
+  color: var(--primary);
+}
+
+nav a {
+  color: white;
+  transition: color 0.4s;
+}
+
+nav a: hover {
+  color: var(--accent);
+}
+
+.btn-outline {
+  border-color: white;
+  color: white;
+  transition: all 0.4s;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary);
+}
+
+.navbar.scrolled .btn-outline {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.navbar.scrolled .btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.hamburger .bar {
+  background: white;
+}
+
+.navbar.scrolled .hamburger .bar {
+  background: var(--dark);
+}
+
+/* Hero - Full beautiful header */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('assets/hero-bg.jpg'); /* Your downloaded image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 30, 100, 0.55); /* Dark blue overlay for readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.hero-content .tag {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.hero-content h1 {
+  font-size: 4.8rem;
+  margin: 20px 0;
+}
+
+.hero-content h1 span {
+  color: var(--accent);
+}
+
+.hero-content h3 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.hero-buttons {
+  margin-bottom: 50px;
+}
+
+.btn {
+  background: var(--accent);
+  box-shadow: 0 8px 20px rgba(0, 170, 255, 0.3);
+}
+
+.btn:hover {
+  background: white;
+  color: var(--primary);
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.hero-profile img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 8px solid white;
+  margin-top: 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 3.5rem; }
+  .hero-content h3 { font-size: 2rem; }
+  .hero-profile img { width: 180px; height: 180px; }
+}
