@@ -6,84 +6,74 @@
   <title>Bandaru Lokesh | Aerospace Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">AEROSPACE</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a href="assets/resume.pdf" class="btn-outline">Download CV</a>
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <div class="nav-menu">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="assets/resume.pdf" class="btn-outline">Download CV</a>
+  </div>
 </header>
 
-<!-- HERO -->
 <section id="home" class="hero">
   <div class="hero-text">
     <span class="tag">👋 Welcome to my Portfolio</span>
     <h1>Hi, I'm <span>Bandaru Lokesh</span></h1>
     <h3>Aerospace Engineering Student</h3>
-    <p>
-      Enthusiastic aerospace engineering student with a strong foundation in
-      aerodynamics, propulsion, and spacecraft design.
-    </p>
-
+    <p>Enthusiastic aerospace engineering student with a strong foundation in aerodynamics, propulsion, and spacecraft design.</p>
     <div class="hero-buttons">
       <a href="#portfolio" class="btn">View Portfolio</a>
       <a href="assets/resume.pdf" class="btn-outline">Download CV</a>
     </div>
-
     <div class="social">
-      <i class="fab fa-github"></i>
-      <i class="fab fa-linkedin"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-instagram"></i>
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
-
   <div class="hero-img">
-    <img src="assets/profile.jpg" alt="Lokesh">
+    <img src="assets/profile.jpg" alt="Bandaru Lokesh - Professional Portrait">
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
   <p class="section-tag">ABOUT ME</p>
   <h2>Know Me More</h2>
-
   <div class="about-grid">
     <div>
       <h3>I'm <span>Bandaru Lokesh</span>, an Aerospace Engineering Student</h3>
-      <p>
-        Currently pursuing B.Tech in Aerospace Engineering at GITAM University,
-        Hyderabad. Passionate about aerodynamics, propulsion systems, and spacecraft design.
-      </p>
-
+      <p>Currently pursuing B.Tech in Aerospace Engineering at GITAM University, Hyderabad. Passionate about aerodynamics, propulsion systems, and spacecraft design.</p>
       <ul class="info">
         <li><b>Name:</b> Bandaru Lokesh</li>
         <li><b>Email:</b> bandarulokesh8531@gmail.com</li>
         <li><b>Phone:</b> +91 7993991374</li>
         <li><b>From:</b> Vishakhapatnam, Andhra Pradesh</li>
       </ul>
-
       <div class="hero-buttons">
         <a href="assets/resume.pdf" class="btn">Download Resume</a>
         <a href="#contact" class="btn-outline">Contact Me</a>
       </div>
     </div>
-
-    <img src="assets/about.jpg" alt="About">
+    <img src="https://today.ucsd.edu/news_uploads/drone-research-4.jpg" alt="Bandaru Lokesh working on aerospace project">
   </div>
 </section>
 
-<!-- STATS -->
 <section class="stats">
   <div class="stat-box"><h2>10+</h2><p>Drone Projects</p></div>
   <div class="stat-box"><h2>15+</h2><p>RC Plane Designs</p></div>
@@ -91,11 +81,9 @@
   <div class="stat-box"><h2>8+</h2><p>Model Aircraft Built</p></div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="section light">
   <p class="section-tag">SERVICES</p>
   <h2>What I Offer</h2>
-
   <div class="cards">
     <div class="card">3D Modeling & CAD Design</div>
     <div class="card">Simulation & Analysis</div>
@@ -106,11 +94,9 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="section">
   <p class="section-tag">SKILLS</p>
   <h2>Technical Expertise</h2>
-
   <div class="cards">
     <div class="card">ANSYS • CFD • Structural Analysis</div>
     <div class="card">CATIA • SolidWorks • Fusion 360</div>
@@ -121,29 +107,73 @@
   </div>
 </section>
 
-<!-- PORTFOLIO -->
 <section id="portfolio" class="section light">
   <p class="section-tag">PORTFOLIO</p>
   <h2>My Projects & Work</h2>
-
   <div class="portfolio-grid">
-    <img src="assets/project1.jpg">
-    <img src="assets/project2.jpg">
-    <img src="assets/project3.jpg">
+    <div class="project-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Quadcopter_Drone_in_flight.jpg" alt="Quadcopter Drone in Flight">
+      <div class="project-content">
+        <h3>Quadcopter Drone Projects</h3>
+        <p>Designed, built, and tested multiple quadcopters focusing on aerodynamics, stability, and custom propulsion systems.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="https://images.pexels.com/photos/27016007/pexels-photo-27016007.jpeg" alt="RC Plane Landing">
+      <div class="project-content">
+        <h3>RC Plane Designs</h3>
+        <p>Created and flew over 15 remote-controlled aircraft models with custom airframes and control systems.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/HHAMS_Planes_2015_E-flite_Apprentice_S_15e_w_custom_LED_lights_IMG_4034_FRD.jpg" alt="Custom Model Aircraft with LED Lights">
+      <div class="project-content">
+        <h3>Advanced Model Aircraft Builds</h3>
+        <p>Constructed 8+ scale model aircraft, including custom modifications like LED lighting for enhanced functionality.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<section id="resume" class="section light">
+  <p class="section-tag">RESUME</p>
+  <h2>Detailed Resume</h2>
+  <div class="resume-container">
+    <div class="resume-column">
+      <h3>Education</h3>
+      <div class="resume-item">
+        <h4>B.Tech in Aerospace Engineering</h4>
+        <p>GITAM University, Hyderabad, Telangana</p>
+        <p>2023 – Present (Expected Graduation: 2027)</p>
+        <p>Relevant Coursework: Aerodynamics, Propulsion Systems, Aircraft Structures, CFD, Spacecraft Design</p>
+      </div>
+    </div>
+    <div class="resume-column">
+      <h3>Achievements & Experience</h3>
+      <ul class="resume-list">
+        <li>Completed 10+ independent drone projects</li>
+        <li>Designed 15+ RC plane models with flight testing</li>
+        <li>Accumulated 20+ hours of hands-on flight experience</li>
+        <li>Built and customized 8+ model aircraft</li>
+      </ul>
+      <p class="mt-20"><strong>Full skills list available in Skills section.</strong></p>
+    </div>
+  </div>
+  <div class="resume-download">
+    <a href="assets/resume.pdf" class="btn">Download Full Resume (PDF)</a>
+  </div>
+</section>
+
 <section id="contact" class="section">
   <p class="section-tag">CONTACT</p>
   <h2>Get In Touch</h2>
-
   <form class="contact-form">
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Your Message"></textarea>
-    <button class="btn">Send Message</button>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
   </form>
+  <p class="form-note">Note: To make the form work, sign up for a free service like Formspree or EmailJS and update the form action.</p>
 </section>
 
 <footer>
