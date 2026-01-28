@@ -1,15 +1,20 @@
 // js/script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Hamburger menu toggle
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
+  // Existing hamburger code (keep yours)...
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+  // New: Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
   });
 
+  // Existing smooth scroll code (keep yours)...
+});
   // Close menu on link click
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
